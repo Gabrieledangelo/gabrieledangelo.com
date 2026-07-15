@@ -29,3 +29,69 @@ body{overflow-x:hidden} a{color:inherit}
 .hero-bg{inset:102px 0 0;background-size:contain;background-position:center top}
 .hero-copy{bottom:28px}.hero-copy h1{font-size:1.2rem}
 .page{padding-top:160px}.cards{grid-template-columns:1fr}}
+/* FEATURED SONGS */
+
+.featured-songs {
+  padding: 70px 30px 100px;
+  background: #000;
+  border-top: 1px solid #222;
+}
+
+.featured-songs h2 {
+  margin: 0 0 35px;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 280px));
+  justify-content: center;
+  gap: 35px;
+}
+
+.song-card {
+  overflow: hidden;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 10px;
+}
+
+.song-card img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.song-info {
+  padding: 18px;
+}
+
+.song-info h3 {
+  min-height: 48px;
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.song-card audio {
+  display: block;
+  width: 100%;
+  height: 42px;
+}
+
+@media (max-width: 950px) {
+  .song-grid {
+    grid-template-columns: repeat(2, minmax(0, 280px));
+  }
+}
+
+@media (max-width: 650px) {
+  .song-grid {
+    grid-template-columns: minmax(0, 300px);
+  }
+}
