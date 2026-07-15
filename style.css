@@ -1,48 +1,305 @@
-:root{--bg:#000;--text:#f4f4f4;--muted:#a7a7a7;--gold:#c9922f;--line:#232323}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-body{overflow-x:hidden} a{color:inherit}
-.site-header{position:fixed;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);z-index:20}
-.brand{color:#fff;text-decoration:none;font-size:clamp(1.25rem,2vw,1.95rem);font-weight:700}
-.site-nav{display:flex;gap:36px}
-.site-nav a{color:#fff;text-decoration:none;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem}
-.site-nav a:hover,.site-nav a:focus-visible{color:var(--gold)}
-.hero{position:relative;min-height:100vh;background:#000;overflow:hidden}
-.hero-bg{position:absolute;inset:76px 0 0;background:#000 url("assets/hero-4k.jpg") center top/cover no-repeat;animation:heroZoom 20s ease-out forwards}
-.hero-copy{position:absolute;left:50%;bottom:46px;transform:translateX(-50%);width:min(900px,88vw);text-align:center;animation:fadeUp .8s ease-out .15s both}
-.hero-copy h1{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(1.55rem,2.65vw,3rem);line-height:1.16;letter-spacing:.02em;text-shadow:0 3px 16px rgba(0,0,0,.95)}
-@keyframes fadeUp{from{opacity:0;transform:translate(-50%,18px)}to{opacity:1;transform:translate(-50%,0)}}
-@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.02)}}
-.page{min-height:100vh;padding:150px 8vw 80px;background:#000}
-.page-content{max-width:1050px;margin:0 auto}
-.kicker{margin:0 0 16px;color:var(--gold);text-transform:uppercase;letter-spacing:.24em;font-size:.74rem}
-.page h1{margin:0 0 28px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.5rem,8vw,7.5rem);line-height:.92;font-weight:400}
-.page p{max-width:760px;color:var(--muted);font-size:1.08rem;line-height:1.8}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
-.cards article{min-height:230px;padding:28px;border:1px solid var(--line);background:#090909}
-.cards h2{margin:0 0 12px;font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:400}
-.email{color:var(--gold);font-size:clamp(1.4rem,3vw,2.3rem);text-decoration:none}
-.email:hover{text-decoration:underline}
-@media(max-width:800px){
-.site-header{min-height:102px;height:auto;align-items:flex-start;flex-direction:column;gap:16px;padding:18px 20px}
-.site-nav{width:100%;gap:16px;flex-wrap:wrap}.site-nav a{font-size:.66rem}
-.hero-bg{inset:102px 0 0;background-size:contain;background-position:center top}
-.hero-copy{bottom:28px}.hero-copy h1{font-size:1.2rem}
-.page{padding-top:160px}.cards{grid-template-columns:1fr}}
-/* FEATURED SONGS */
+:root {
+  --bg: #000;
+  --text: #f4f4f4;
+  --muted: #a7a7a7;
+  --gold: #c9922f;
+  --line: #232323;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* HEADER */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  color: #fff;
+
+  font-size: clamp(1.25rem, 2vw, 1.95rem);
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 36px;
+}
+
+.site-nav a {
+  color: #fff;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--gold);
+}
+
+
+/* HOME HERO */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 76px 0 0;
+
+  background:
+    #000
+    url("assets/hero-4k.jpg")
+    center top / cover
+    no-repeat;
+
+  animation: heroZoom 20s ease-out forwards;
+}
+
+.hero-copy {
+  position: absolute;
+  bottom: 46px;
+  left: 50%;
+
+  width: min(900px, 88vw);
+
+  text-align: center;
+
+  transform: translateX(-50%);
+
+  animation: fadeUp 0.8s ease-out 0.15s both;
+}
+
+.hero-copy h1 {
+  margin: 0;
+
+  color: #fff;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.65vw, 3rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.02);
+  }
+}
+
+
+/* GENERIC INTERNAL PAGES */
+
+.page {
+  min-height: 100vh;
+
+  padding: 150px 8vw 80px;
+
+  background: #000;
+}
+
+.page-content {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.kicker {
+  margin: 0 0 16px;
+
+  color: var(--gold);
+
+  font-size: 0.74rem;
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+}
+
+.page h1 {
+  margin: 0 0 28px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+}
+
+.page p {
+  max-width: 760px;
+
+  color: var(--muted);
+
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+
+  margin-top: 48px;
+}
+
+.cards article {
+  min-height: 230px;
+
+  padding: 28px;
+
+  background: #090909;
+
+  border: 1px solid var(--line);
+}
+
+.cards h2 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.email {
+  color: var(--gold);
+
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+
+/* IMPERFECT AND FEATURED SONGS */
 
 .featured-songs {
-  padding: 32px 24px 70px;
+  padding: 65px 24px 70px;
+
   background: #000;
+
   border-top: 1px solid #222;
 }
 
-.featured-songs h2 {
-  margin: 0 0 24px;
-  color: #fff;
+.music-project-intro {
+  max-width: 760px;
+
+  margin: 0 auto 50px;
+
   text-align: center;
+}
+
+.section-eyebrow {
+  margin: 0 0 20px;
+
+  color: #888;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.imperfect-logo {
+  display: block;
+
+  width: min(520px, 85vw);
+  max-height: 150px;
+
+  margin: 0 auto 25px;
+
+  object-fit: contain;
+}
+
+.section-intro {
+  max-width: 660px;
+
+  margin: 0 auto;
+
+  color: #aaa;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.featured-songs .songs-heading {
+  margin: 0 0 24px;
+
+  color: #fff;
+
   font-size: 30px;
+  font-weight: 400;
   letter-spacing: 2px;
+
+  text-align: center;
 }
 
 .song-grid {
@@ -54,16 +311,22 @@ body{overflow-x:hidden} a{color:inherit}
 
 .song-card {
   overflow: hidden;
+
   background: #111;
+
   border: 1px solid #292929;
   border-radius: 10px;
 }
 
 .song-card img {
   display: block;
+
   width: 100%;
+
   aspect-ratio: 16 / 9;
+
   object-fit: contain;
+
   background: #000;
 }
 
@@ -73,17 +336,256 @@ body{overflow-x:hidden} a{color:inherit}
 
 .song-info h3 {
   min-height: 44px;
+
   margin: 0 0 14px;
+
   color: #fff;
+
   font-size: 16px;
   line-height: 1.35;
 }
 
 .song-card audio {
   display: block;
+
   width: 100%;
   height: 42px;
 }
+
+
+/* LATEST PROJECTS */
+
+.latest-projects {
+  padding: 90px 6vw 110px;
+
+  background: #050505;
+  color: #fff;
+
+  border-top: 1px solid #222;
+}
+
+.projects-heading {
+  max-width: 760px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.projects-heading h2 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 400;
+}
+
+.projects-heading > p:last-child {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 470px));
+  justify-content: center;
+  gap: 25px;
+}
+
+.project-card {
+  min-height: 260px;
+
+  padding: 38px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #292929;
+  border-radius: 10px;
+}
+
+.project-type {
+  color: #777;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 55px 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.project-card p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* ABOUT PAGE */
+
+.about-page {
+  min-height: 100vh;
+
+  padding: 150px 6vw 90px;
+
+  background: #000;
+  color: #fff;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns:
+    minmax(300px, 390px)
+    minmax(0, 690px);
+
+  align-items: center;
+  gap: 55px;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+.about-photo-wrap {
+  overflow: hidden;
+
+  aspect-ratio: 4 / 5;
+
+  background: #090909;
+
+  border: 1px solid #292929;
+}
+
+.about-photo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+
+  filter: grayscale(100%);
+}
+
+.about-copy {
+  min-width: 0;
+}
+
+.about-copy .about-title {
+  margin: 0 0 24px;
+
+  color: #9a9a9a;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 1px;
+
+  text-transform: none;
+  white-space: normal;
+}
+
+.about-lead {
+  margin: 0 0 28px;
+
+  color: #fff;
+
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.about-copy p {
+  max-width: 690px;
+
+  text-wrap: pretty;
+}
+
+.about-copy p:not(.about-lead) {
+  margin: 0 0 18px;
+
+  color: #b8b8b8;
+
+  font-size: 17px;
+  line-height: 1.72;
+}
+
+.about-disciplines {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+
+  max-width: 1120px;
+
+  margin: 90px auto 0;
+
+  background: #292929;
+
+  border: 1px solid #292929;
+}
+
+.discipline {
+  min-height: 230px;
+
+  padding: 35px;
+
+  background: #090909;
+}
+
+.discipline span {
+  color: #777;
+
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.discipline h2 {
+  margin: 45px 0 14px;
+
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.discipline p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.about-signoff {
+  max-width: 1120px;
+
+  margin: 55px auto 0;
+
+  color: #888;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-style: italic;
+
+  text-align: right;
+}
+
+
+/* TABLET */
 
 @media (max-width: 1050px) {
   .song-grid {
@@ -91,13 +593,133 @@ body{overflow-x:hidden} a{color:inherit}
   }
 }
 
-@media (max-width: 650px) {
-  .featured-songs {
-    padding: 20px 16px 50px;
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .site-header {
+    min-height: 102px;
+    height: auto;
+
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 18px 20px;
   }
 
-  .featured-songs h2 {
+  .site-nav {
+    width: 100%;
+
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .site-nav a {
+    font-size: 0.66rem;
+  }
+
+  .hero-bg {
+    inset: 102px 0 0;
+
+    background-position: center top;
+    background-size: contain;
+  }
+
+  .hero-copy {
+    bottom: 28px;
+  }
+
+  .hero-copy h1 {
+    font-size: 1.2rem;
+  }
+
+  .page {
+    padding-top: 160px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .music-project-intro {
+    margin-bottom: 38px;
+  }
+
+  .imperfect-logo {
+    width: min(400px, 90vw);
+  }
+
+  .section-intro {
+    font-size: 16px;
+  }
+
+  .latest-projects {
+    padding: 65px 20px 75px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+
+    padding: 30px;
+  }
+
+  .project-card h3 {
+    margin-top: 35px;
+  }
+
+  .about-page {
+    padding: 125px 20px 60px;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-photo-wrap {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto;
+  }
+
+  .about-copy .about-title {
+    margin-bottom: 20px;
+
+    font-size: 17px;
+  }
+
+  .about-disciplines {
+    grid-template-columns: 1fr;
+
+    margin-top: 60px;
+  }
+
+  .discipline {
+    min-height: auto;
+  }
+
+  .discipline h2 {
+    margin-top: 25px;
+  }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 650px) {
+  .featured-songs {
+    padding: 40px 16px 50px;
+  }
+
+  .featured-songs .songs-heading {
     margin-bottom: 18px;
+
     font-size: 26px;
   }
 

@@ -1,87 +1,245 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Official website of Gabriele D'Angelo">
-<link rel="stylesheet" href="style.css">
-<title>Gabriele D'Angelo</title></head><body class="home-page"><header class="site-header">
-<a class="brand" href="index.html">Gabriele D'Angelo</a>
-<nav class="site-nav">
-<a href="about.html">About</a>
-<a href="projects.html">Projects</a>
-<a href="stories.html">Stories</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-<main class="hero"><div class="hero-bg"></div>
-<div class="hero-copy"><h1>Original songs born<br>where silence was no longer enough.</h1></div>
-</main>
+<!doctype html>
+<html lang="en">
 
-<section class="featured-songs" aria-labelledby="featured-songs-title">
-  <h2 id="featured-songs-title">Featured Songs</h2>
+<head>
+  <meta charset="utf-8">
 
-  <div class="song-grid">
-    <article class="song-card">
-      <img
-        src="assets/songs/fighting-for-your-life.jpg"
-        alt="Fighting For Your Life cover"
-      >
-      <div class="song-info">
-        <h3>Fighting For Your Life</h3>
-        <audio controls preload="none">
-          <source
-            src="assets/songs/fighting-for-your-life.mp3"
-            type="audio/mpeg"
-          >
-        </audio>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Official website of Gabriele D'Angelo: music, 3D visual art, acting and creative projects."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Gabriele D'Angelo</title>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html">
+      Gabriele D'Angelo
+    </a>
+
+    <nav class="site-nav">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="stories.html">Stories</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <div
+        class="hero-bg"
+        role="img"
+        aria-label="Gabriele D'Angelo"
+      ></div>
+
+      <div class="hero-copy">
+
+        <h1>
+          Music, images and stories.<br>
+          Different languages, one creative path.
+        </h1>
+
       </div>
-    </article>
 
-    <article class="song-card">
-      <img
-        src="assets/songs/another-beer-one-kiss-another-lie.jpg"
-        alt="Another Beer, One Kiss, Another Lie cover"
-      >
-      <div class="song-info">
-        <h3>Another Beer, One Kiss, Another Lie</h3>
-        <audio controls preload="none">
-          <source
-            src="assets/songs/another-beer-one-kiss-another-lie.mp3"
-            type="audio/mpeg"
-          >
-        </audio>
+    </section>
+
+    <section
+      class="featured-songs music-project"
+      aria-label="IMPERFECT music project"
+    >
+
+      <div class="music-project-intro">
+
+        <p class="section-eyebrow">
+          My latest musical creation
+        </p>
+
+        <img
+          class="imperfect-logo"
+          src="assets/imperfect-logo.png"
+          alt="IMPERFECT artist logo"
+        >
+
+        <p class="section-intro">
+          IMPERFECT is the artist identity under which I release
+          my original songs: melodic rock shaped by guitars,
+          emotion and storytelling.
+        </p>
+
       </div>
-    </article>
 
-    <article class="song-card">
-      <img
-        src="assets/songs/at-the-end-of-the-days.jpg"
-        alt="At the End of the Days cover"
-      >
-      <div class="song-info">
-        <h3>At the End of the Days</h3>
-        <audio controls preload="none">
-          <source
-            src="assets/songs/at-the-end-of-the-days.mp3"
-            type="audio/mpeg"
+      <h2 class="songs-heading">
+        Selected Songs
+      </h2>
+
+      <div class="song-grid">
+
+        <article class="song-card">
+
+          <img
+            src="assets/songs/fighting-for-your-life.jpg"
+            alt="Fighting For Your Life cover"
           >
-        </audio>
+
+          <div class="song-info">
+
+            <h3>Fighting For Your Life</h3>
+
+            <audio controls preload="none">
+
+              <source
+                src="assets/songs/fighting-for-your-life.mp3"
+                type="audio/mpeg"
+              >
+
+            </audio>
+
+          </div>
+
+        </article>
+
+        <article class="song-card">
+
+          <img
+            src="assets/songs/another-beer-one-kiss-another-lie.jpg"
+            alt="Another Beer, One Kiss, Another Lie cover"
+          >
+
+          <div class="song-info">
+
+            <h3>
+              Another Beer, One Kiss, Another Lie
+            </h3>
+
+            <audio controls preload="none">
+
+              <source
+                src="assets/songs/another-beer-one-kiss-another-lie.mp3"
+                type="audio/mpeg"
+              >
+
+            </audio>
+
+          </div>
+
+        </article>
+
+        <article class="song-card">
+
+          <img
+            src="assets/songs/at-the-end-of-the-days.jpg"
+            alt="At the End of the Days cover"
+          >
+
+          <div class="song-info">
+
+            <h3>At the End of the Days</h3>
+
+            <audio controls preload="none">
+
+              <source
+                src="assets/songs/at-the-end-of-the-days.mp3"
+                type="audio/mpeg"
+              >
+
+            </audio>
+
+          </div>
+
+        </article>
+
       </div>
-    </article>
-  </div>
-</section>
 
-<script>
-  const audioPlayers = document.querySelectorAll("audio");
+    </section>
 
-  audioPlayers.forEach((player) => {
-    player.addEventListener("play", () => {
-      audioPlayers.forEach((otherPlayer) => {
-        if (otherPlayer !== player) {
-          otherPlayer.pause();
-        }
+    <section
+      class="latest-projects"
+      aria-labelledby="latest-projects-title"
+    >
+
+      <div class="projects-heading">
+
+        <p class="section-eyebrow">
+          Beyond music
+        </p>
+
+        <h2 id="latest-projects-title">
+          Latest Projects
+        </h2>
+
+        <p>
+          Film, visual art and new creative work currently
+          taking shape.
+        </p>
+
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+
+          <span class="project-type">
+            Short film · In development
+          </span>
+
+          <h3>Oro o mai più</h3>
+
+          <p>
+            A short story about desire, illusion and the strange
+            distance between what we seek and what we truly need.
+          </p>
+
+        </article>
+
+        <article class="project-card">
+
+          <span class="project-type">
+            3D Visual Art
+          </span>
+
+          <h3>Latest 3D Work</h3>
+
+          <p>
+            A new digital image project combining atmosphere,
+            storytelling and professional 3D rendering.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    const audioPlayers = document.querySelectorAll("audio");
+
+    audioPlayers.forEach((player) => {
+      player.addEventListener("play", () => {
+        audioPlayers.forEach((otherPlayer) => {
+          if (otherPlayer !== player) {
+            otherPlayer.pause();
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
