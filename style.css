@@ -270,13 +270,11 @@ a {
 
 .imperfect-logo {
   display: block;
-
-  width: min(520px, 85vw);
-  max-height: 150px;
-
+  width: min(800px, 90vw);
+  max-height: 250px;
   margin: 0 auto 25px;
-
   object-fit: contain;
+  transform: translateX(-25px);
 }
 
 .section-intro {
