@@ -4,6 +4,20 @@
   --muted: #a7a7a7;
   --gold: #c9922f;
   --line: #232323;
+
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+
+  --leading-tight: 1.15;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
 }
 
 * {
@@ -16,7 +30,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
 body {
@@ -105,7 +119,7 @@ a {
 .hero-copy h1 {
   margin: 0;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(1.55rem, 2.65vw, 3rem);
   font-weight: 400;
   line-height: 1.16;
@@ -159,7 +173,7 @@ a {
 
 .page h1 {
   margin: 0 0 28px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(3.5rem, 8vw, 7.5rem);
   font-weight: 400;
   line-height: 0.92;
@@ -188,7 +202,7 @@ a {
 
 .cards h2 {
   margin: 0 0 12px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 400;
 }
@@ -220,11 +234,13 @@ a {
 
 .section-eyebrow {
   margin: 0 0 20px;
-  color: #888;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  font-style: italic;
-  letter-spacing: 1px;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .imperfect-logo {
@@ -240,16 +256,18 @@ a {
   max-width: 660px;
   margin: 0 auto;
   color: #aaa;
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .featured-songs .songs-heading {
   margin: 0 0 24px;
   color: #fff;
-  font-size: 30px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 400;
-  letter-spacing: 2px;
+  line-height: var(--leading-tight);
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
@@ -283,7 +301,9 @@ a {
   min-height: 44px;
   margin: 0 0 14px;
   color: #fff;
-  font-size: 16px;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 400;
   line-height: 1.35;
 }
 
@@ -311,7 +331,7 @@ a {
 
 .projects-heading h2 {
   margin: 0 0 18px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(38px, 5vw, 58px);
   font-weight: 400;
 }
@@ -319,8 +339,8 @@ a {
 .projects-heading > p:last-child {
   margin: 0;
   color: #999;
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .project-grid {
@@ -390,7 +410,7 @@ a {
 .project-card h3 {
   margin: 34px 0 16px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: 29px;
   font-weight: 400;
   line-height: 1.15;
@@ -399,8 +419,8 @@ a {
 .project-card p {
   margin: 0 0 28px;
   color: #aaa;
-  font-size: 15px;
-  line-height: 1.75;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .project-link {
@@ -468,7 +488,7 @@ a {
 .project-detail-intro h1 {
   margin: 0 0 28px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(3.6rem, 6.5vw, 6.6rem);
   font-weight: 400;
   line-height: 0.92;
@@ -478,7 +498,7 @@ a {
 .project-detail-lead {
   margin: 0 0 25px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(1.25rem, 2vw, 1.6rem);
   line-height: 1.45;
 }
@@ -486,8 +506,8 @@ a {
 .project-detail-intro > p:last-child {
   margin: 0;
   color: #aaa;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .project-detail-content {
@@ -516,7 +536,7 @@ a {
 .project-detail-section h2 {
   margin: 0 0 22px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: 29px;
   font-weight: 400;
 }
@@ -524,8 +544,8 @@ a {
 .project-detail-section p {
   margin: 0 0 18px;
   color: #aaa;
-  font-size: 15px;
-  line-height: 1.78;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .project-detail-section em {
@@ -606,7 +626,7 @@ a {
 .about-copy .about-title {
   margin: 0 0 24px;
   color: #9a9a9a;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: 18px;
   font-weight: 400;
   font-style: italic;
@@ -619,8 +639,8 @@ a {
 .about-lead {
   margin: 0 0 28px;
   color: #fff;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
 }
 
 .about-copy p {
@@ -631,8 +651,8 @@ a {
 .about-copy p:not(.about-lead) {
   margin: 0 0 18px;
   color: #b8b8b8;
-  font-size: 17px;
-  line-height: 1.72;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .about-disciplines {
@@ -659,22 +679,23 @@ a {
 
 .discipline h2 {
   margin: 45px 0 14px;
-  font-size: 23px;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 400;
 }
 
 .discipline p {
   margin: 0;
   color: #999;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 .about-signoff {
   max-width: 1120px;
   margin: 55px auto 0;
   color: #888;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: 25px;
   font-style: italic;
   text-align: right;
@@ -758,7 +779,7 @@ a {
   }
 
   .section-intro {
-    font-size: 16px;
+    font-size: var(--text-base);
   }
 
   .latest-projects {
@@ -880,7 +901,7 @@ a {
 
 .projects-journal-header h1 {
   margin: 0 0 22px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(4rem, 8vw, 7.4rem);
   font-weight: 400;
   line-height: 0.92;
@@ -890,8 +911,8 @@ a {
   max-width: 720px;
   margin: 0;
   color: #a7a7a7;
-  font-size: 18px;
-  line-height: 1.75;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
 }
 
 .projects-journal-list {
@@ -982,7 +1003,7 @@ a {
 .wooden-key-visual strong {
   position: relative;
   z-index: 1;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   line-height: 0.9;
   letter-spacing: 0.14em;
 }
@@ -1038,7 +1059,7 @@ a {
 .journal-entry-content h2 {
   margin: 54px 0 18px;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   font-weight: 400;
   line-height: 1;
@@ -1048,8 +1069,8 @@ a {
   max-width: 650px;
   margin: 0 0 32px;
   color: #aaa;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
   text-wrap: pretty;
 }
 
@@ -1076,14 +1097,14 @@ a {
 .future-projects-label {
   margin: 0 0 16px;
   color: #888;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: 16px;
   font-style: italic;
 }
 
 .future-projects h2 {
   margin: 0 0 18px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-serif);
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   font-weight: 400;
 }
@@ -1092,8 +1113,8 @@ a {
   max-width: 720px;
   margin: 0;
   color: #999;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
 }
 
 
@@ -1132,7 +1153,7 @@ a {
   }
 
   .projects-journal-intro {
-    font-size: 16px;
+    font-size: var(--text-base);
   }
 
   .journal-entry {
@@ -1227,4 +1248,233 @@ a {
     padding: 20px 38px;
   }
 
+}
+
+/* =========================================================
+   FINAL TYPOGRAPHY SYSTEM
+   Clean uppercase editorial style.
+   The IMPERFECT logo image remains completely unchanged.
+   ========================================================= */
+
+:root {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --tracking-wide: 0.18em;
+  --tracking-medium: 0.1em;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+}
+
+.brand,
+.site-nav a,
+.kicker,
+.section-eyebrow,
+.songs-heading,
+.song-info h3,
+.projects-heading h2,
+.project-type,
+.project-card h3,
+.project-link,
+.project-detail-type,
+.project-detail-intro h1,
+.project-detail-section h2,
+.project-status,
+.about-copy .about-title,
+.discipline h2,
+.projects-journal-kicker,
+.projects-journal-header h1,
+.journal-entry-meta,
+.journal-entry-content h2,
+.journal-entry-link,
+.future-projects-label,
+.future-projects h2,
+.page h1,
+.cards h2 {
+  font-family: var(--font-sans);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.brand {
+  font-size: clamp(1.05rem, 1.65vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.site-nav a {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+}
+
+.hero-copy h1 {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.7vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow,
+.kicker,
+.projects-journal-kicker,
+.project-detail-type {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.section-intro,
+.projects-heading > p:last-child,
+.project-card p,
+.project-detail-intro > p:last-child,
+.project-detail-section p,
+.about-lead,
+.about-copy p:not(.about-lead),
+.discipline p,
+.projects-journal-intro,
+.journal-entry-content p,
+.future-projects > p:last-child,
+.page p {
+  font-family: var(--font-sans);
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.featured-songs .songs-heading,
+.projects-heading h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+}
+
+.song-info h3 {
+  min-height: 42px;
+  margin: 0 0 18px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+}
+
+.song-card {
+  border-radius: 9px;
+}
+
+.song-info {
+  padding: 18px 16px 16px;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 560 / 314;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.project-card h3,
+.project-detail-section h2,
+.discipline h2 {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.project-card h3 {
+  font-size: 1.45rem;
+}
+
+.project-detail-intro h1,
+.page h1,
+.projects-journal-header h1 {
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.project-detail-lead,
+.about-signoff,
+.future-projects-label {
+  font-family: var(--font-sans);
+  font-style: normal;
+}
+
+.about-copy .about-title,
+.future-projects-label {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.about-signoff {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.journal-entry-content h2,
+.future-projects h2 {
+  font-weight: 500;
+  letter-spacing: 0.07em;
+}
+
+@media (max-width: 800px) {
+  .brand {
+    font-size: 1rem;
+    letter-spacing: 0.13em;
+  }
+
+  .hero-copy h1 {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+  }
+
+  .featured-songs .songs-heading,
+  .projects-heading h2 {
+    font-size: 1.25rem;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* FINAL HOMEPAGE CORRECTIONS */
+
+.featured-songs .songs-heading {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 560 / 314;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
 }

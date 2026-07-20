@@ -83,83 +83,69 @@
       </div>
 
       <h2 class="songs-heading">
-        Selected Songs
+        Featured Videos
       </h2>
 
       <div class="song-grid">
 
         <article class="song-card">
-
-          <img
-            src="assets/songs/fighting-for-your-life.jpg"
-            alt="Fighting For Your Life cover"
-          >
-
           <div class="song-info">
-
             <h3>Fighting For Your Life</h3>
-
-            <audio controls preload="none">
-
-              <source
-                src="assets/songs/fighting-for-your-life.mp3"
-                type="audio/mpeg"
-              >
-
-            </audio>
-
+            <div class="video-frame">
+              <iframe
+                class="video-embed"
+                src="https://www.facebook.com/plugins/video.php?height=313&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1594342318917058%2F&amp;show_text=false&amp;width=560&amp;t=0"
+                width="560"
+                height="313"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Fighting For Your Life"
+              ></iframe>
+            </div>
           </div>
-
         </article>
 
         <article class="song-card">
-
-          <img
-            src="assets/songs/another-beer-one-kiss-another-lie.jpg"
-            alt="Another Beer, One Kiss, Another Lie cover"
-          >
-
           <div class="song-info">
-
-            <h3>
-              Another Beer, One Kiss, Another Lie
-            </h3>
-
-            <audio controls preload="none">
-
-              <source
-                src="assets/songs/another-beer-one-kiss-another-lie.mp3"
-                type="audio/mpeg"
-              >
-
-            </audio>
-
+            <h3>Another Beer, One Kiss, Another Lie</h3>
+            <div class="video-frame">
+              <iframe
+                class="video-embed"
+                src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2527873800974663%2F&amp;show_text=false&amp;width=560&amp;t=0"
+                width="560"
+                height="314"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Another Beer, One Kiss, Another Lie"
+              ></iframe>
+            </div>
           </div>
-
         </article>
 
         <article class="song-card">
-
-          <img
-            src="assets/songs/at-the-end-of-the-days.jpg"
-            alt="At the End of the Days cover"
-          >
-
           <div class="song-info">
-
             <h3>At the End of the Days</h3>
-
-            <audio controls preload="none">
-
-              <source
-                src="assets/songs/at-the-end-of-the-days.mp3"
-                type="audio/mpeg"
-              >
-
-            </audio>
-
+            <div class="video-frame">
+              <iframe
+                class="video-embed"
+                src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1555674772304159%2F&amp;show_text=false&amp;width=560&amp;t=0"
+                width="560"
+                height="314"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="At the End of the Days"
+              ></iframe>
+            </div>
           </div>
-
         </article>
 
       </div>
@@ -261,21 +247,6 @@
     </section>
 
   </main>
-
-  <script>
-    const audioPlayers = document.querySelectorAll("audio");
-
-    audioPlayers.forEach((player) => {
-      player.addEventListener("play", () => {
-        audioPlayers.forEach((otherPlayer) => {
-          if (otherPlayer !== player) {
-            otherPlayer.pause();
-          }
-        });
-      });
-    });
-  </script>
-
 </body>
 
 </html>
