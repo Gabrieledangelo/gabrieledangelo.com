@@ -27,15 +27,16 @@
       Gabriele D'Angelo
     </a>
 
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Main navigation">
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="apollo.html">Book</a>
+      <a href="books.html">Books</a>
       <a href="stories.html">Stories</a>
       <a href="contact.html">Contact</a>
     </nav>
 
   </header>
+
 
   <main>
 
@@ -57,6 +58,7 @@
       </div>
 
     </section>
+
 
     <section
       class="featured-songs music-project"
@@ -83,9 +85,11 @@
 
       </div>
 
+
       <h2 class="songs-heading">
         Selected Songs
       </h2>
+
 
       <div class="song-grid">
 
@@ -98,7 +102,9 @@
 
           <div class="song-info">
 
-            <h3>Fighting For Your Life</h3>
+            <h3>
+              Fighting For Your Life
+            </h3>
 
             <audio controls preload="none">
 
@@ -112,6 +118,7 @@
           </div>
 
         </article>
+
 
         <article class="song-card">
 
@@ -139,6 +146,7 @@
 
         </article>
 
+
         <article class="song-card">
 
           <img
@@ -148,7 +156,9 @@
 
           <div class="song-info">
 
-            <h3>At the End of the Days</h3>
+            <h3>
+              At the End of the Days
+            </h3>
 
             <audio controls preload="none">
 
@@ -166,6 +176,7 @@
       </div>
 
     </section>
+
 
     <section
       class="latest-projects"
@@ -189,7 +200,9 @@
 
       </div>
 
+
       <div class="project-grid">
+
 
         <a
           class="project-card"
@@ -226,6 +239,7 @@
 
         </a>
 
+
         <a
           class="project-card"
           href="3d-visual-art.html"
@@ -261,40 +275,6 @@
 
         </a>
 
-        <a
-          class="project-card"
-          href="apollo.html"
-          aria-label="Discover APOLLO: THE ULTIMATE INVESTIGATION"
-        >
-
-          <img
-            class="project-image apollo-project-image"
-            src="assets/apollo-cover.jpg"
-            alt="APOLLO: THE ULTIMATE INVESTIGATION book cover"
-          >
-
-          <div class="project-card-content">
-
-            <span class="project-type">
-              Book · Daniel Gibralee
-            </span>
-
-            <h3>
-              APOLLO: THE ULTIMATE INVESTIGATION
-            </h3>
-
-            <p>
-              A critical investigation into the evidence, records and
-              unanswered questions surrounding the Apollo Moon landings.
-            </p>
-
-            <span class="project-link">
-              Discover the book →
-            </span>
-
-          </div>
-
-        </a>
 
       </div>
 
@@ -302,19 +282,29 @@
 
   </main>
 
+
   <script>
+
     const audioPlayers = document.querySelectorAll("audio");
 
     audioPlayers.forEach((player) => {
+
       player.addEventListener("play", () => {
+
         audioPlayers.forEach((otherPlayer) => {
+
           if (otherPlayer !== player) {
             otherPlayer.pause();
           }
+
         });
+
       });
+
     });
+
   </script>
+
 
 </body>
 
