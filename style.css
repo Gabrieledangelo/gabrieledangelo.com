@@ -877,6 +877,7 @@ a {
   }
 }
 
+
 /* PROJECTS JOURNAL PAGE */
 
 .projects-journal-page {
@@ -1189,6 +1190,7 @@ a {
   }
 }
 
+
 /* PROJECTS - COMPACT ROWS */
 
 @media (min-width: 951px) {
@@ -1249,6 +1251,7 @@ a {
   }
 
 }
+
 
 /* =========================================================
    FINAL TYPOGRAPHY SYSTEM
@@ -1455,6 +1458,7 @@ select {
   }
 }
 
+
 /* FINAL HOMEPAGE CORRECTIONS */
 
 .featured-songs .songs-heading {
@@ -1477,4 +1481,329 @@ select {
   width: 100% !important;
   height: 100% !important;
   border: 0 !important;
+}
+
+
+/* =========================================================
+   BOOKS PAGE
+   ========================================================= */
+
+.books-page {
+  min-height: 100vh;
+  padding: 145px 6vw 100px;
+  background: #000;
+  color: #fff;
+}
+
+.books-header {
+  max-width: 1180px;
+  margin: 0 auto 65px;
+}
+
+.books-kicker {
+  margin: 0 0 18px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.6px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.books-header h1 {
+  margin: 0 0 22px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: clamp(4rem, 8vw, 7.4rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.books-intro {
+  max-width: 720px;
+  margin: 0;
+  color: #a7a7a7;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+
+/* BOOK ENTRY */
+
+.book-entry {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 55px;
+  max-width: 1050px;
+  margin: 0 auto 42px;
+  padding: 34px;
+  background: #0b0b0b;
+  border: 1px solid #292929;
+  border-radius: 12px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.book-entry:hover {
+  transform: translateY(-4px);
+  background: #101010;
+  border-color: rgba(201, 146, 47, 0.7);
+}
+
+.book-entry-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 470px;
+  background: #050505;
+  border: 1px solid #222;
+}
+
+.book-entry-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.book-entry-content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 15px 15px 0;
+}
+
+.book-entry-status {
+  margin: 0 0 18px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.book-entry-content h2 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.book-entry-author {
+  margin: 0 0 28px;
+  color: #8f8f8f;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.book-entry-content > p:not(.book-entry-status):not(.book-entry-author) {
+  max-width: 650px;
+  margin: 0 0 32px;
+  color: #aaa;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.book-entry-link {
+  display: inline-block;
+  margin-top: auto;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+a.book-entry-link:hover,
+a.book-entry-link:focus-visible {
+  color: #e0ad51;
+}
+
+
+/* JOHN DOE WORK IN PROGRESS */
+
+.book-entry-wip {
+  opacity: 0.92;
+}
+
+.book-entry-placeholder {
+  position: relative;
+  min-height: 360px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(201, 146, 47, 0.12),
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      #111 0%,
+      #050505 75%
+    );
+}
+
+.book-entry-placeholder::before,
+.book-entry-placeholder::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 146, 47, 0.5),
+    transparent
+  );
+}
+
+.book-entry-placeholder::before {
+  top: 25%;
+}
+
+.book-entry-placeholder::after {
+  bottom: 25%;
+}
+
+.book-entry-placeholder span {
+  position: relative;
+  z-index: 1;
+  color: #c9c9c9;
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.books-closing {
+  max-width: 1050px;
+  margin: 65px auto 0;
+  padding-top: 38px;
+  border-top: 1px solid #292929;
+}
+
+.books-closing p {
+  max-width: 720px;
+  margin: 0;
+  color: #888;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+
+/* BOOKS TABLET */
+
+@media (max-width: 950px) {
+  .book-entry {
+    grid-template-columns: minmax(240px, 310px) minmax(0, 1fr);
+    gap: 38px;
+    padding: 28px;
+  }
+
+  .book-entry-cover {
+    min-height: 410px;
+  }
+
+  .book-entry-content h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+}
+
+
+/* BOOKS MOBILE */
+
+@media (max-width: 800px) {
+  .books-page {
+    padding: 135px 20px 70px;
+  }
+
+  .books-header {
+    margin-bottom: 42px;
+  }
+
+  .books-header h1 {
+    font-size: clamp(3.4rem, 15vw, 5.5rem);
+  }
+
+  .books-intro {
+    font-size: var(--text-base);
+  }
+
+  .book-entry {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 22px;
+  }
+
+  .book-entry-cover,
+  .book-entry-placeholder {
+    width: 100%;
+    min-height: 420px;
+    max-height: 560px;
+  }
+
+  .book-entry-content {
+    padding: 0 4px 8px;
+  }
+
+  .book-entry-status {
+    margin-bottom: 16px;
+  }
+
+  .book-entry-content h2 {
+    font-size: clamp(1.8rem, 9vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .book-entry-author {
+    margin-bottom: 22px;
+  }
+
+  .book-entry-content > p:not(.book-entry-status):not(.book-entry-author) {
+    margin-bottom: 28px;
+  }
+
+  .book-entry-link {
+    margin-top: 0;
+  }
+
+  .books-closing {
+    margin-top: 50px;
+    padding-top: 30px;
+  }
+}
+
+
+/* BOOKS SMALL MOBILE */
+
+@media (max-width: 500px) {
+  .book-entry {
+    padding: 16px;
+  }
+
+  .book-entry-cover,
+  .book-entry-placeholder {
+    min-height: 360px;
+  }
+
+  .book-entry-content h2 {
+    font-size: 1.75rem;
+  }
 }
