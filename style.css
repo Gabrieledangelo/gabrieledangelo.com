@@ -1189,63 +1189,6 @@ a {
   }
 }
 
-/* PROJECTS - COMPACT ROWS */
-
-@media (min-width: 951px) {
-
-  .projects-journal-list {
-    gap: 14px;
-  }
-
-  .journal-entry {
-    min-height: 175px;
-  }
-
-  .journal-entry-visual,
-  .journal-entry-visual img {
-    height: 175px;
-    min-height: 175px;
-  }
-
-  .journal-entry-content {
-    padding: 20px 32px;
-  }
-
-  .journal-entry-meta {
-    font-size: 10px;
-    letter-spacing: 1.6px;
-  }
-
-  .journal-entry-content h2 {
-    margin: 16px 0 9px;
-    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
-  }
-
-  .journal-entry-content p {
-    margin: 0 0 12px;
-    font-size: 14px;
-    line-height: 1.5;
-
-  }
-
-  .journal-entry-link {
-    font-size: 12px;
-  }
-
-  .wooden-key-visual span {
-    font-size: clamp(1.4rem, 2.7vw, 2.7rem);
-  }
-
-  .wooden-key-visual strong {
-    font-size: clamp(2.2rem, 4.2vw, 4.3rem);
-  }
-
-  .imperfect-project-visual {
-    padding: 20px 38px;
-  }
-
-}
-
 /* =========================================================
    FINAL TYPOGRAPHY SYSTEM
    Clean uppercase editorial style.
