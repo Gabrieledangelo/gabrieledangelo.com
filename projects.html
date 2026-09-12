@@ -122,3 +122,12 @@
 </main>
 </body>
 </html>
+
+/* REMOVE UNWANTED MARKERS FROM PROJECTS */
+.projects-journal-page .journal-entry::before,
+.projects-journal-page .journal-entry::after,
+.projects-journal-page .journal-entry-visual::before,
+.projects-journal-page .journal-entry-visual::after {
+  content: none !important;
+  display: none !important;
+}
