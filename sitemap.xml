@@ -1,9 +1,42 @@
-/
-/about.html
-/projects.html
-/stories.html
-/contact.html
-/oro-o-mai-piu.html
-/3d-visual-art.html
-/books.html
-/apollo.html
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://gabrieledangelo.com/</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/projects.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/stories.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/books.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/apollo.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/oro-o-mai-piu.html</loc>
+  </url>
+
+  <url>
+    <loc>https://gabrieledangelo.com/3d-visual-art.html</loc>
+  </url>
+
+</urlset>
+```
